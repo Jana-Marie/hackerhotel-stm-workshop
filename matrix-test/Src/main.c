@@ -22,7 +22,6 @@
 #define FBDEPH 4
 #define FBDEPHPOW 16
 #include "main.h"
-#include "gamma.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -36,8 +35,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define DW 8
-#define DH 8
 
 /* USER CODE END PD */
 
@@ -144,21 +141,11 @@ int main(void)
       for(uint8_t y = 0; y <= 7; y++){
         color = 32.0 + sin((10.0*(((x-4)/8.0)*sin(HAL_GetTick()/500.0)+((y-4)/8.0)*cos(HAL_GetTick()/300.0)))+HAL_GetTick()/10000.0)*32;
         //color = x*64;
-        setPixel(x,y,(int16_t)(gamma_calc(color)));
+        setPixel(x,y,color);
       }
     }
     tickTime = HAL_GetTick() - lastTick;
     //HAL_SPI_Transmit_DMA(&hspi1,fbuf,8);
-
-
-    /*
-
-    color = ( 128.0 + (128.0 * sin(x+(HAL_GetTick()/40) / 16.0))
-            + 128.0 + (128.0 * sin(y+(HAL_GetTick()/70) / 32.0))
-            + 128.0 + (128.0 * sin(sqrt((double)((x - DW / 2.0)* (x - DW / 2.0) + (y - DH / 2.0) * (y - DH / 2.0))) / 8.0))
-            + 128.0 + (128.0 * sin(sqrt((double)(x * x + y * y + HAL_GetTick())) / 8.0))
-          ) / 32;
-    */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -178,15 +165,6 @@ void setPixel(uint8_t x, uint8_t y, int16_t c){
     fbuf[i][y] ^= (-cBit ^ fbuf[i][y]) & (1UL << x);
     c = c >> 1;
   }
-}
-
-float gamma_calc(float target){
-	float p1,p2;
-
-	p1 = gammaTable[(int)target];
-	p2 = gammaTable[(int)target+1];
-
-	return (p1 + ((p1-p2)*((int)target-target)));
 }
 
 /**
