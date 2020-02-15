@@ -27,7 +27,7 @@ build/main.o: Src/main.c Inc/main.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
- Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h Inc/gamma.h
+ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 
 Inc/main.h:
 
@@ -92,5 +92,3 @@ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h:
 
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h:
-
-Inc/gamma.h:

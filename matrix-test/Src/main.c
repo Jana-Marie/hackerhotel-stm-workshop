@@ -41,7 +41,6 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 void setPixel(uint8_t x, uint8_t y, int16_t c);
-float gamma_calc(float target);
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -49,8 +48,6 @@ SPI_HandleTypeDef hspi1;
 DMA_HandleTypeDef hdma_spi1_tx;
 
 TIM_HandleTypeDef htim1;
-
-PCD_HandleTypeDef hpcd_USB_FS;
 
 /* USER CODE BEGIN PV */
 uint8_t modCnt = 0;
@@ -71,7 +68,6 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM1_Init(void);
-static void MX_USB_PCD_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -114,7 +110,6 @@ int main(void)
   MX_DMA_Init();
   MX_SPI1_Init();
   MX_TIM1_Init();
-  MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
   HAL_SPI_Init(&hspi1);
   HAL_SPI_Transmit_DMA(&hspi1,cbuf,4);
@@ -327,32 +322,6 @@ static void MX_TIM1_Init(void)
   * @param None
   * @retval None
   */
-static void MX_USB_PCD_Init(void)
-{
-
-  /* USER CODE BEGIN USB_Init 0 */
-
-  /* USER CODE END USB_Init 0 */
-
-  /* USER CODE BEGIN USB_Init 1 */
-
-  /* USER CODE END USB_Init 1 */
-  hpcd_USB_FS.Instance = USB;
-  hpcd_USB_FS.Init.dev_endpoints = 8;
-  hpcd_USB_FS.Init.speed = PCD_SPEED_FULL;
-  hpcd_USB_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
-  hpcd_USB_FS.Init.low_power_enable = DISABLE;
-  hpcd_USB_FS.Init.lpm_enable = DISABLE;
-  hpcd_USB_FS.Init.battery_charging_enable = DISABLE;
-  if (HAL_PCD_Init(&hpcd_USB_FS) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USB_Init 2 */
-
-  /* USER CODE END USB_Init 2 */
-
-}
 
 /**
   * Enable DMA controller clock
