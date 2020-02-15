@@ -20,6 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include <math.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -49,7 +50,7 @@ TIM_HandleTypeDef htim1;
 /* USER CODE BEGIN PV */
 uint8_t modCnt = 0;
 uint16_t fbuf[FBDEPH][8];
-uint16_t cbuf[4]={0x0b07,   //scanLimit no limit
+uint16_t cbuf[5]={0x0b07,   //scanLimit no limit
                   0x0900,   //decode mode none
                   0x0c01,   //shutdown off
                   0x0f00,   //display test off
@@ -109,7 +110,7 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   HAL_SPI_Init(&hspi1);
-  HAL_SPI_Transmit_DMA(&hspi1,cbuf,4);
+  HAL_SPI_Transmit_DMA(&hspi1,cbuf,sizeof(cbuf));
 
   for(uint8_t i = 1; i <= 8; i++){
     for(uint8_t j = 0; j <= FBDEPH-1; j++){

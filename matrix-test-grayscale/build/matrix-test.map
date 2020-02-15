@@ -1435,12 +1435,12 @@ LOAD /home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc
                 0x0000000008002024       0x30 build/main.o
  .text.MX_TIM1_Init
                 0x0000000008002054       0xb4 build/main.o
- .text.setPixel
-                0x0000000008002108       0x54 build/main.o
-                0x0000000008002108                setPixel
  .text.SystemClock_Config
-                0x000000000800215c       0x58 build/main.o
-                0x000000000800215c                SystemClock_Config
+                0x0000000008002108       0x58 build/main.o
+                0x0000000008002108                SystemClock_Config
+ .text.setPixel
+                0x0000000008002160       0x54 build/main.o
+                0x0000000008002160                setPixel
  .text.main     0x00000000080021b4      0x190 build/main.o
                 0x00000000080021b4                main
  .text.Error_Handler
@@ -1790,12 +1790,12 @@ LOAD /home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc
                 0x0000000020000000                _sdata = .
  *(.data)
  *(.data*)
- .data.cbuf     0x0000000020000000        0x8 build/main.o
+ .data.cbuf     0x0000000020000000        0xa build/main.o
                 0x0000000020000000                cbuf
  .data.uwTickFreq
-                0x0000000020000008        0x1 build/stm32f0xx_hal.o
-                0x0000000020000008                uwTickFreq
- *fill*         0x0000000020000009        0x3 
+                0x000000002000000a        0x1 build/stm32f0xx_hal.o
+                0x000000002000000a                uwTickFreq
+ *fill*         0x000000002000000b        0x1 
  .data.uwTickPrio
                 0x000000002000000c        0x4 build/stm32f0xx_hal.o
                 0x000000002000000c                uwTickPrio
@@ -1943,37 +1943,37 @@ LOAD /home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc
                 0x0000000000000746       0x1e /home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
 OUTPUT(build/matrix-test.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xd635
- .debug_info    0x0000000000000000     0x15ea build/main.o
- .debug_info    0x00000000000015ea      0xaaf build/stm32f0xx_it.o
- .debug_info    0x0000000000002099     0x14c8 build/stm32f0xx_hal_msp.o
- .debug_info    0x0000000000003561     0x1fc8 build/stm32f0xx_hal_spi.o
- .debug_info    0x0000000000005529      0xade build/stm32f0xx_hal_rcc.o
- .debug_info    0x0000000000006007      0x7c3 build/stm32f0xx_hal_rcc_ex.o
- .debug_info    0x00000000000067ca      0x7f4 build/stm32f0xx_hal.o
- .debug_info    0x0000000000006fbe      0x703 build/stm32f0xx_hal_gpio.o
- .debug_info    0x00000000000076c1      0x8ea build/stm32f0xx_hal_dma.o
- .debug_info    0x0000000000007fab      0x8b7 build/stm32f0xx_hal_cortex.o
- .debug_info    0x0000000000008862     0x3522 build/stm32f0xx_hal_tim.o
- .debug_info    0x000000000000bd84     0x15bc build/stm32f0xx_hal_tim_ex.o
- .debug_info    0x000000000000d340      0x2d3 build/system_stm32f0xx.o
- .debug_info    0x000000000000d613       0x22 build/startup_stm32f072xb.o
+.debug_info     0x0000000000000000     0xdf3d
+ .debug_info    0x0000000000000000     0x1ef2 build/main.o
+ .debug_info    0x0000000000001ef2      0xaaf build/stm32f0xx_it.o
+ .debug_info    0x00000000000029a1     0x14c8 build/stm32f0xx_hal_msp.o
+ .debug_info    0x0000000000003e69     0x1fc8 build/stm32f0xx_hal_spi.o
+ .debug_info    0x0000000000005e31      0xade build/stm32f0xx_hal_rcc.o
+ .debug_info    0x000000000000690f      0x7c3 build/stm32f0xx_hal_rcc_ex.o
+ .debug_info    0x00000000000070d2      0x7f4 build/stm32f0xx_hal.o
+ .debug_info    0x00000000000078c6      0x703 build/stm32f0xx_hal_gpio.o
+ .debug_info    0x0000000000007fc9      0x8ea build/stm32f0xx_hal_dma.o
+ .debug_info    0x00000000000088b3      0x8b7 build/stm32f0xx_hal_cortex.o
+ .debug_info    0x000000000000916a     0x3522 build/stm32f0xx_hal_tim.o
+ .debug_info    0x000000000000c68c     0x15bc build/stm32f0xx_hal_tim_ex.o
+ .debug_info    0x000000000000dc48      0x2d3 build/system_stm32f0xx.o
+ .debug_info    0x000000000000df1b       0x22 build/startup_stm32f072xb.o
 
-.debug_abbrev   0x0000000000000000     0x1cde
- .debug_abbrev  0x0000000000000000      0x2dd build/main.o
- .debug_abbrev  0x00000000000002dd      0x19e build/stm32f0xx_it.o
- .debug_abbrev  0x000000000000047b      0x23a build/stm32f0xx_hal_msp.o
- .debug_abbrev  0x00000000000006b5      0x2a2 build/stm32f0xx_hal_spi.o
- .debug_abbrev  0x0000000000000957      0x269 build/stm32f0xx_hal_rcc.o
- .debug_abbrev  0x0000000000000bc0      0x208 build/stm32f0xx_hal_rcc_ex.o
- .debug_abbrev  0x0000000000000dc8      0x209 build/stm32f0xx_hal.o
- .debug_abbrev  0x0000000000000fd1      0x213 build/stm32f0xx_hal_gpio.o
- .debug_abbrev  0x00000000000011e4      0x252 build/stm32f0xx_hal_dma.o
- .debug_abbrev  0x0000000000001436      0x279 build/stm32f0xx_hal_cortex.o
- .debug_abbrev  0x00000000000016af      0x286 build/stm32f0xx_hal_tim.o
- .debug_abbrev  0x0000000000001935      0x26d build/stm32f0xx_hal_tim_ex.o
- .debug_abbrev  0x0000000000001ba2      0x12a build/system_stm32f0xx.o
- .debug_abbrev  0x0000000000001ccc       0x12 build/startup_stm32f072xb.o
+.debug_abbrev   0x0000000000000000     0x1d81
+ .debug_abbrev  0x0000000000000000      0x380 build/main.o
+ .debug_abbrev  0x0000000000000380      0x19e build/stm32f0xx_it.o
+ .debug_abbrev  0x000000000000051e      0x23a build/stm32f0xx_hal_msp.o
+ .debug_abbrev  0x0000000000000758      0x2a2 build/stm32f0xx_hal_spi.o
+ .debug_abbrev  0x00000000000009fa      0x269 build/stm32f0xx_hal_rcc.o
+ .debug_abbrev  0x0000000000000c63      0x208 build/stm32f0xx_hal_rcc_ex.o
+ .debug_abbrev  0x0000000000000e6b      0x209 build/stm32f0xx_hal.o
+ .debug_abbrev  0x0000000000001074      0x213 build/stm32f0xx_hal_gpio.o
+ .debug_abbrev  0x0000000000001287      0x252 build/stm32f0xx_hal_dma.o
+ .debug_abbrev  0x00000000000014d9      0x279 build/stm32f0xx_hal_cortex.o
+ .debug_abbrev  0x0000000000001752      0x286 build/stm32f0xx_hal_tim.o
+ .debug_abbrev  0x00000000000019d8      0x26d build/stm32f0xx_hal_tim_ex.o
+ .debug_abbrev  0x0000000000001c45      0x12a build/system_stm32f0xx.o
+ .debug_abbrev  0x0000000000001d6f       0x12 build/startup_stm32f072xb.o
 
 .debug_loc      0x0000000000000000     0xa73c
  .debug_loc     0x0000000000000000      0x250 build/main.o
@@ -2036,50 +2036,50 @@ OUTPUT(build/matrix-test.elf elf32-littlearm)
  .debug_ranges  0x0000000000000b18       0x18 build/system_stm32f0xx.o
  .debug_ranges  0x0000000000000b30       0x20 build/startup_stm32f072xb.o
 
-.debug_line     0x0000000000000000     0x4dde
- .debug_line    0x0000000000000000      0x3b5 build/main.o
- .debug_line    0x00000000000003b5      0x26d build/stm32f0xx_it.o
- .debug_line    0x0000000000000622      0x33f build/stm32f0xx_hal_msp.o
- .debug_line    0x0000000000000961      0xd4e build/stm32f0xx_hal_spi.o
- .debug_line    0x00000000000016af      0x4e6 build/stm32f0xx_hal_rcc.o
- .debug_line    0x0000000000001b95      0x468 build/stm32f0xx_hal_rcc_ex.o
- .debug_line    0x0000000000001ffd      0x3bb build/stm32f0xx_hal.o
- .debug_line    0x00000000000023b8      0x33c build/stm32f0xx_hal_gpio.o
- .debug_line    0x00000000000026f4      0x43d build/stm32f0xx_hal_dma.o
- .debug_line    0x0000000000002b31      0x372 build/stm32f0xx_hal_cortex.o
- .debug_line    0x0000000000002ea3     0x14dd build/stm32f0xx_hal_tim.o
- .debug_line    0x0000000000004380      0x819 build/stm32f0xx_hal_tim_ex.o
- .debug_line    0x0000000000004b99      0x1ce build/system_stm32f0xx.o
- .debug_line    0x0000000000004d67       0x77 build/startup_stm32f072xb.o
+.debug_line     0x0000000000000000     0x4ec9
+ .debug_line    0x0000000000000000      0x4a0 build/main.o
+ .debug_line    0x00000000000004a0      0x26d build/stm32f0xx_it.o
+ .debug_line    0x000000000000070d      0x33f build/stm32f0xx_hal_msp.o
+ .debug_line    0x0000000000000a4c      0xd4e build/stm32f0xx_hal_spi.o
+ .debug_line    0x000000000000179a      0x4e6 build/stm32f0xx_hal_rcc.o
+ .debug_line    0x0000000000001c80      0x468 build/stm32f0xx_hal_rcc_ex.o
+ .debug_line    0x00000000000020e8      0x3bb build/stm32f0xx_hal.o
+ .debug_line    0x00000000000024a3      0x33c build/stm32f0xx_hal_gpio.o
+ .debug_line    0x00000000000027df      0x43d build/stm32f0xx_hal_dma.o
+ .debug_line    0x0000000000002c1c      0x372 build/stm32f0xx_hal_cortex.o
+ .debug_line    0x0000000000002f8e     0x14dd build/stm32f0xx_hal_tim.o
+ .debug_line    0x000000000000446b      0x819 build/stm32f0xx_hal_tim_ex.o
+ .debug_line    0x0000000000004c84      0x1ce build/system_stm32f0xx.o
+ .debug_line    0x0000000000004e52       0x77 build/startup_stm32f072xb.o
 
-.debug_str      0x0000000000000000     0x376f
- .debug_str     0x0000000000000000      0xf41 build/main.o
-                                       0x1039 (size before relaxing)
- .debug_str     0x0000000000000f41       0xd9 build/stm32f0xx_it.o
+.debug_str      0x0000000000000000     0x3b81
+ .debug_str     0x0000000000000000     0x1359 build/main.o
+                                       0x147b (size before relaxing)
+ .debug_str     0x0000000000001359       0xd9 build/stm32f0xx_it.o
                                         0x8f8 (size before relaxing)
- .debug_str     0x000000000000101a      0x48d build/stm32f0xx_hal_msp.o
+ .debug_str     0x0000000000001432      0x48d build/stm32f0xx_hal_msp.o
                                         0xf44 (size before relaxing)
- .debug_str     0x00000000000014a7      0x584 build/stm32f0xx_hal_spi.o
+ .debug_str     0x00000000000018bf      0x584 build/stm32f0xx_hal_spi.o
                                         0xc33 (size before relaxing)
- .debug_str     0x0000000000001a2b      0x1ee build/stm32f0xx_hal_rcc.o
+ .debug_str     0x0000000000001e43      0x1ee build/stm32f0xx_hal_rcc.o
                                         0x6bb (size before relaxing)
- .debug_str     0x0000000000001c19      0x294 build/stm32f0xx_hal_rcc_ex.o
+ .debug_str     0x0000000000002031      0x28e build/stm32f0xx_hal_rcc_ex.o
                                         0x6b3 (size before relaxing)
- .debug_str     0x0000000000001ead      0x1e5 build/stm32f0xx_hal.o
+ .debug_str     0x00000000000022bf      0x1e5 build/stm32f0xx_hal.o
                                         0x70f (size before relaxing)
- .debug_str     0x0000000000002092      0x141 build/stm32f0xx_hal_gpio.o
+ .debug_str     0x00000000000024a4      0x141 build/stm32f0xx_hal_gpio.o
                                         0x4a6 (size before relaxing)
- .debug_str     0x00000000000021d3      0x1df build/stm32f0xx_hal_dma.o
+ .debug_str     0x00000000000025e5      0x1df build/stm32f0xx_hal_dma.o
                                         0x6bb (size before relaxing)
- .debug_str     0x00000000000023b2      0x239 build/stm32f0xx_hal_cortex.o
+ .debug_str     0x00000000000027c4      0x239 build/stm32f0xx_hal_cortex.o
                                         0x6f9 (size before relaxing)
- .debug_str     0x00000000000025eb      0xd1a build/stm32f0xx_hal_tim.o
+ .debug_str     0x00000000000029fd      0xd1a build/stm32f0xx_hal_tim.o
                                        0x1523 (size before relaxing)
- .debug_str     0x0000000000003305      0x40e build/stm32f0xx_hal_tim_ex.o
+ .debug_str     0x0000000000003717      0x40e build/stm32f0xx_hal_tim_ex.o
                                         0xcef (size before relaxing)
- .debug_str     0x0000000000003713       0x38 build/system_stm32f0xx.o
+ .debug_str     0x0000000000003b25       0x38 build/system_stm32f0xx.o
                                         0x2d2 (size before relaxing)
- .debug_str     0x000000000000374b       0x24 build/startup_stm32f072xb.o
+ .debug_str     0x0000000000003b5d       0x24 build/startup_stm32f072xb.o
                                          0x53 (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
