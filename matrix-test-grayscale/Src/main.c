@@ -19,10 +19,7 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#define FBDEPH 4
-#define FBDEPHPOW 16
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -30,7 +27,8 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#define FBDEPH 4
+#define FBDEPHPOW 16
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -40,7 +38,6 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-void setPixel(uint8_t x, uint8_t y, int16_t c);
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -69,7 +66,7 @@ static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
-
+void setPixel(uint8_t x, uint8_t y, int16_t c);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -148,19 +145,6 @@ int main(void)
   /* USER CODE END 3 */
 }
 
-void setPixel(uint8_t x, uint8_t y, int16_t c){
-  if(x > 7 || y > 7) return;
-  if(c >= FBDEPHPOW) c = FBDEPHPOW-1;
-  if(c < 0) c = 0;
-  //c = c & 0x01;
-  uint8_t cBit;
-
-  for(uint8_t i = 0; i <= FBDEPH-1; i++){
-    cBit = c & 0x01;
-    fbuf[i][y] ^= (-cBit ^ fbuf[i][y]) & (1UL << x);
-    c = c >> 1;
-  }
-}
 
 /**
   * @brief System Clock Configuration
@@ -354,7 +338,19 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void setPixel(uint8_t x, uint8_t y, int16_t c){
+  if(x > 7 || y > 7) return;
+  if(c >= FBDEPHPOW) c = FBDEPHPOW-1;
+  if(c < 0) c = 0;
+  //c = c & 0x01;
+  uint8_t cBit;
 
+  for(uint8_t i = 0; i <= FBDEPH-1; i++){
+    cBit = c & 0x01;
+    fbuf[i][y] ^= (-cBit ^ fbuf[i][y]) & (1UL << x);
+    c = c >> 1;
+  }
+}
 /* USER CODE END 4 */
 
 /**

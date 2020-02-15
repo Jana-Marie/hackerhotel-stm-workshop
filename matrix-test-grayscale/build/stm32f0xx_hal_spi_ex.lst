@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccWk5suE.s 			page 1
+ARM GAS  /tmp/ccaNGpUu.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccWk5suE.s 			page 1
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c **** /** @defgroup SPIEx SPIEx
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   * @brief SPI Extended HAL module driver
   33:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   * @{
-ARM GAS  /tmp/ccWk5suE.s 			page 2
+ARM GAS  /tmp/ccaNGpUu.s 			page 2
 
 
   34:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccWk5suE.s 			page 1
   32              	.LCFI0:
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 4, -8
-ARM GAS  /tmp/ccWk5suE.s 			page 3
+ARM GAS  /tmp/ccaNGpUu.s 			page 3
 
 
   35              		.cfi_offset 14, -4
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccWk5suE.s 			page 1
   74              		.loc 1 94 0
   75 0026 0020     		movs	r0, #0
   76              	.LVL7:
-ARM GAS  /tmp/ccWk5suE.s 			page 4
+ARM GAS  /tmp/ccaNGpUu.s 			page 4
 
 
   77 0028 FBE7     		b	.L3
@@ -194,12 +194,12 @@ ARM GAS  /tmp/ccWk5suE.s 			page 1
   88              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
   89              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h"
   90              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/ccWk5suE.s 			page 5
+ARM GAS  /tmp/ccaNGpUu.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_hal_spi_ex.c
-     /tmp/ccWk5suE.s:16     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 $t
-     /tmp/ccWk5suE.s:23     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 HAL_SPIEx_FlushRxFifo
+     /tmp/ccaNGpUu.s:16     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 $t
+     /tmp/ccaNGpUu.s:23     .text.HAL_SPIEx_FlushRxFifo:0000000000000000 HAL_SPIEx_FlushRxFifo
 
 NO UNDEFINED SYMBOLS

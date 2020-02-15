@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccLHSZVe.s 			page 1
+ARM GAS  /tmp/ccLhuIHB.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
   31:Src/stm32f0xx_hal_msp.c **** 
   32:Src/stm32f0xx_hal_msp.c **** /* USER CODE END TD */
   33:Src/stm32f0xx_hal_msp.c **** 
-ARM GAS  /tmp/ccLHSZVe.s 			page 2
+ARM GAS  /tmp/ccLhuIHB.s 			page 2
 
 
   34:Src/stm32f0xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
   40 000a 9961     		str	r1, [r3, #24]
   41 000c 9969     		ldr	r1, [r3, #24]
   42 000e 0A40     		ands	r2, r1
-ARM GAS  /tmp/ccLHSZVe.s 			page 3
+ARM GAS  /tmp/ccLhuIHB.s 			page 3
 
 
   43 0010 0092     		str	r2, [sp]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
   82              		@ frame_needed = 0, uses_anonymous_args = 0
   83              	.LVL0:
   84 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccLHSZVe.s 			page 4
+ARM GAS  /tmp/ccLhuIHB.s 			page 4
 
 
   85              	.LCFI1:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  124:Src/stm32f0xx_hal_msp.c ****     if (HAL_DMA_Init(&hdma_spi1_tx) != HAL_OK)
  125:Src/stm32f0xx_hal_msp.c ****     {
  126:Src/stm32f0xx_hal_msp.c ****       Error_Handler();
-ARM GAS  /tmp/ccLHSZVe.s 			page 5
+ARM GAS  /tmp/ccLhuIHB.s 			page 5
 
 
  127:Src/stm32f0xx_hal_msp.c ****     }
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  145 004a 0133     		adds	r3, r3, #1
  146 004c 0693     		str	r3, [sp, #24]
  112:Src/stm32f0xx_hal_msp.c **** 
-ARM GAS  /tmp/ccLHSZVe.s 			page 6
+ARM GAS  /tmp/ccLhuIHB.s 			page 6
 
 
  147              		.loc 1 112 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  190              		.loc 1 126 0
  191 0088 FFF7FEFF 		bl	Error_Handler
  192              	.LVL7:
-ARM GAS  /tmp/ccLHSZVe.s 			page 7
+ARM GAS  /tmp/ccLhuIHB.s 			page 7
 
 
  193 008c F8E7     		b	.L6
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  154:Src/stm32f0xx_hal_msp.c ****     /**SPI1 GPIO Configuration
  155:Src/stm32f0xx_hal_msp.c ****     PA4     ------> SPI1_NSS
  156:Src/stm32f0xx_hal_msp.c ****     PA5     ------> SPI1_SCK
-ARM GAS  /tmp/ccLHSZVe.s 			page 8
+ARM GAS  /tmp/ccLhuIHB.s 			page 8
 
 
  157:Src/stm32f0xx_hal_msp.c ****     PA6     ------> SPI1_MISO
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  271              		.thumb_func
  272              		.fpu softvfp
  274              	HAL_TIM_Base_MspInit:
-ARM GAS  /tmp/ccLHSZVe.s 			page 9
+ARM GAS  /tmp/ccLhuIHB.s 			page 9
 
 
  275              	.LFB43:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  303 0010 0A4A     		ldr	r2, .L19+4
  304 0012 9169     		ldr	r1, [r2, #24]
  305 0014 8020     		movs	r0, #128
-ARM GAS  /tmp/ccLHSZVe.s 			page 10
+ARM GAS  /tmp/ccLhuIHB.s 			page 10
 
 
  306              	.LVL18:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  357              		.cfi_def_cfa_offset 32
  358 0004 0400     		movs	r4, r0
  198:Src/stm32f0xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
-ARM GAS  /tmp/ccLHSZVe.s 			page 11
+ARM GAS  /tmp/ccLhuIHB.s 			page 11
 
 
  359              		.loc 1 198 0
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  389 002c 0093     		str	r3, [sp]
  390 002e 009B     		ldr	r3, [sp]
  391              	.LBE7:
-ARM GAS  /tmp/ccLHSZVe.s 			page 12
+ARM GAS  /tmp/ccLhuIHB.s 			page 12
 
 
  209:Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  436              		.cfi_offset 14, -4
  230:Src/stm32f0xx_hal_msp.c ****   if(htim_base->Instance==TIM1)
  437              		.loc 1 230 0
-ARM GAS  /tmp/ccLHSZVe.s 			page 13
+ARM GAS  /tmp/ccLhuIHB.s 			page 13
 
 
  438 0002 0268     		ldr	r2, [r0]
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  476              		.thumb_func
  477              		.fpu softvfp
  479              	HAL_PCD_MspInit:
-ARM GAS  /tmp/ccLHSZVe.s 			page 14
+ARM GAS  /tmp/ccLhuIHB.s 			page 14
 
 
  480              	.LFB46:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  511 0018 D161     		str	r1, [r2, #28]
  512 001a D369     		ldr	r3, [r2, #28]
  513 001c 0340     		ands	r3, r0
-ARM GAS  /tmp/ccLHSZVe.s 			page 15
+ARM GAS  /tmp/ccLhuIHB.s 			page 15
 
 
  514 001e 0193     		str	r3, [sp, #4]
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  289:Src/stm32f0xx_hal_msp.c **** }
  549              		.loc 1 289 0
  550              		@ sp needed
-ARM GAS  /tmp/ccLHSZVe.s 			page 16
+ARM GAS  /tmp/ccLhuIHB.s 			page 16
 
 
  551 0008 7047     		bx	lr
@@ -937,35 +937,35 @@ ARM GAS  /tmp/ccLHSZVe.s 			page 1
  584              		.file 14 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h"
  585              		.file 15 "Inc/main.h"
  586              		.file 16 "<built-in>"
-ARM GAS  /tmp/ccLHSZVe.s 			page 17
+ARM GAS  /tmp/ccLhuIHB.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_hal_msp.c
-     /tmp/ccLHSZVe.s:16     .text.HAL_MspInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-     /tmp/ccLHSZVe.s:65     .text.HAL_MspInit:000000000000002c $d
-     /tmp/ccLHSZVe.s:70     .text.HAL_SPI_MspInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:77     .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
-     /tmp/ccLHSZVe.s:197    .text.HAL_SPI_MspInit:0000000000000090 $d
-     /tmp/ccLHSZVe.s:205    .text.HAL_SPI_MspDeInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:212    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
-     /tmp/ccLHSZVe.s:260    .text.HAL_SPI_MspDeInit:000000000000002c $d
-     /tmp/ccLHSZVe.s:267    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:274    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
-     /tmp/ccLHSZVe.s:330    .text.HAL_TIM_Base_MspInit:0000000000000038 $d
-     /tmp/ccLHSZVe.s:336    .text.HAL_TIM_MspPostInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:343    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
-     /tmp/ccLHSZVe.s:411    .text.HAL_TIM_MspPostInit:0000000000000048 $d
-     /tmp/ccLHSZVe.s:418    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:425    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
-     /tmp/ccLHSZVe.s:465    .text.HAL_TIM_Base_MspDeInit:0000000000000020 $d
-     /tmp/ccLHSZVe.s:472    .text.HAL_PCD_MspInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:479    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
-     /tmp/ccLHSZVe.s:522    .text.HAL_PCD_MspInit:0000000000000024 $d
-     /tmp/ccLHSZVe.s:528    .text.HAL_PCD_MspDeInit:0000000000000000 $t
-     /tmp/ccLHSZVe.s:535    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
-     /tmp/ccLHSZVe.s:564    .text.HAL_PCD_MspDeInit:0000000000000018 $d
+     /tmp/ccLhuIHB.s:16     .text.HAL_MspInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:23     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+     /tmp/ccLhuIHB.s:65     .text.HAL_MspInit:000000000000002c $d
+     /tmp/ccLhuIHB.s:70     .text.HAL_SPI_MspInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:77     .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
+     /tmp/ccLhuIHB.s:197    .text.HAL_SPI_MspInit:0000000000000090 $d
+     /tmp/ccLhuIHB.s:205    .text.HAL_SPI_MspDeInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:212    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
+     /tmp/ccLhuIHB.s:260    .text.HAL_SPI_MspDeInit:000000000000002c $d
+     /tmp/ccLhuIHB.s:267    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:274    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+     /tmp/ccLhuIHB.s:330    .text.HAL_TIM_Base_MspInit:0000000000000038 $d
+     /tmp/ccLhuIHB.s:336    .text.HAL_TIM_MspPostInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:343    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+     /tmp/ccLhuIHB.s:411    .text.HAL_TIM_MspPostInit:0000000000000048 $d
+     /tmp/ccLhuIHB.s:418    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:425    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+     /tmp/ccLhuIHB.s:465    .text.HAL_TIM_Base_MspDeInit:0000000000000020 $d
+     /tmp/ccLhuIHB.s:472    .text.HAL_PCD_MspInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:479    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+     /tmp/ccLhuIHB.s:522    .text.HAL_PCD_MspInit:0000000000000024 $d
+     /tmp/ccLhuIHB.s:528    .text.HAL_PCD_MspDeInit:0000000000000000 $t
+     /tmp/ccLhuIHB.s:535    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+     /tmp/ccLhuIHB.s:564    .text.HAL_PCD_MspDeInit:0000000000000018 $d
 
 UNDEFINED SYMBOLS
 memset
