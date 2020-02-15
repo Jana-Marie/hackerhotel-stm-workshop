@@ -33,8 +33,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define DW 8
-#define DH 8
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -47,8 +45,6 @@ SPI_HandleTypeDef hspi1;
 DMA_HandleTypeDef hdma_spi1_tx;
 
 TIM_HandleTypeDef htim1;
-
-PCD_HandleTypeDef hpcd_USB_FS;
 
 /* USER CODE BEGIN PV */
 uint16_t fbuf[8];
@@ -68,7 +64,6 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM1_Init(void);
-static void MX_USB_PCD_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -111,7 +106,6 @@ int main(void)
   MX_DMA_Init();
   MX_SPI1_Init();
   MX_TIM1_Init();
-  MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
   HAL_SPI_Init(&hspi1);
   HAL_SPI_Transmit_DMA(&hspi1,cbuf,4);
@@ -142,17 +136,8 @@ int main(void)
       }
     }
     tickTime = HAL_GetTick() - lastTick;
-    //HAL_SPI_Transmit_DMA(&hspi1,fbuf,8);
+    HAL_SPI_Transmit_DMA(&hspi1,fbuf,8);
 
-
-    /*
-
-    color = ( 128.0 + (128.0 * sin(x+(HAL_GetTick()/40) / 16.0))
-            + 128.0 + (128.0 * sin(y+(HAL_GetTick()/70) / 32.0))
-            + 128.0 + (128.0 * sin(sqrt((double)((x - DW / 2.0)* (x - DW / 2.0) + (y - DH / 2.0) * (y - DH / 2.0))) / 8.0))
-            + 128.0 + (128.0 * sin(sqrt((double)(x * x + y * y + HAL_GetTick())) / 8.0))
-          ) / 32;
-    */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -318,38 +303,6 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 2 */
   HAL_TIM_MspPostInit(&htim1);
-
-}
-
-/**
-  * @brief USB Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USB_PCD_Init(void)
-{
-
-  /* USER CODE BEGIN USB_Init 0 */
-
-  /* USER CODE END USB_Init 0 */
-
-  /* USER CODE BEGIN USB_Init 1 */
-
-  /* USER CODE END USB_Init 1 */
-  hpcd_USB_FS.Instance = USB;
-  hpcd_USB_FS.Init.dev_endpoints = 8;
-  hpcd_USB_FS.Init.speed = PCD_SPEED_FULL;
-  hpcd_USB_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
-  hpcd_USB_FS.Init.low_power_enable = DISABLE;
-  hpcd_USB_FS.Init.lpm_enable = DISABLE;
-  hpcd_USB_FS.Init.battery_charging_enable = DISABLE;
-  if (HAL_PCD_Init(&hpcd_USB_FS) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USB_Init 2 */
-
-  /* USER CODE END USB_Init 2 */
 
 }
 

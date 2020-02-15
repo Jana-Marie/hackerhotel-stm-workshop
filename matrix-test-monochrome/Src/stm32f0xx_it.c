@@ -162,9 +162,7 @@ void DMA1_Channel2_3_IRQHandler(void)
 void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM1_BRK_UP_TRG_COM_IRQn 0 */
-  if(__HAL_TIM_GET_FLAG(&htim1,TIM_FLAG_UPDATE) && HAL_DMA_GetState(&hdma_spi1_tx) == HAL_DMA_STATE_READY){
-    HAL_SPI_Transmit_DMA(&hspi1,fbuf,8);
-  }
+
   /* USER CODE END TIM1_BRK_UP_TRG_COM_IRQn 0 */
   HAL_TIM_IRQHandler(&htim1);
   /* USER CODE BEGIN TIM1_BRK_UP_TRG_COM_IRQn 1 */
