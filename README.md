@@ -298,6 +298,9 @@ flash with dfu-util:
 dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin
 ```
 
+![](monochrome_c.gif)
+
+
 -----
 
 #### Greyscale matrix test:
@@ -475,3 +478,4 @@ flash with dfu-util:
 dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin
 ```
 
+![](grayscale_c.gif)
