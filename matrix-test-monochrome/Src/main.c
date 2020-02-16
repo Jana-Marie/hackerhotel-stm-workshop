@@ -108,7 +108,7 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   HAL_SPI_Init(&hspi1);
-  HAL_SPI_Transmit_DMA(&hspi1,cbuf,sizeof(cbuf));
+  HAL_SPI_Transmit_DMA(&hspi1,cbuf,5);
 
   for(uint8_t i = 1; i <= 8; i++){
     fbuf[i-1] = (i << 8);
