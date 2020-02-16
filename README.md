@@ -31,8 +31,6 @@ If you would like to join, please prepare the following software on your laptop:
 
 -----
 
-### Before the workshop:
-
 #### prerequisites (debian / Ubuntu):
 
 ```
@@ -48,11 +46,8 @@ https://github.com/texane/stlink
 
 https://github.com/texane/stlink/blob/master/doc/compiling.md
 
-https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-monochrome/matrix-test.ioc
 
-
-
-**If you have arm-none-eabi-gcc V6 (check with 'arm-none-eabi-gcc - v'):**
+If you have arm-none-eabi-gcc V6 (check with 'arm-none-eabi-gcc - v'):
 ```
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
 sudo apt-get update
@@ -113,18 +108,18 @@ Toolchain / IDE -> Makefile
 ```
 
 *(top right)*
-
-`Generate Code`
-
+```
+Generate Code
+```
 
 ##### Toolchain
 
 Open Terminal, locate to project location
 
 Launch editor in project root directory
-
-`make`
-
+```
+make
+```
 Should compile just fine
 
 
@@ -142,8 +137,10 @@ HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 0);
 HAL_Delay(100);
 ```
 
-`make`
-
+In console type 
+```
+make
+```
 Should compile just fine
 
 
@@ -157,9 +154,9 @@ plug in the OtterPill while pressing the DFU button
 Bus 001 Device 007: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
 
 flash with dfu-util:
-
-`dfu-util -a 0 -s 0x08000000:leave -D build/blink.bin`
-
+```
+dfu-util -a 0 -s 0x08000000:leave -D build/blink.bin
+```
 
 -----
 
@@ -171,6 +168,8 @@ flash with dfu-util:
 *(left)*
 ```
 System Core -> SYS -> Debug Serial Wire
+```
+```
 Timers -> TIM1 -> Channel 1: PWM Generation CH1N or PB13 -> TIM1_CH1N
 Parameter Settings -> Counter Settings -> Prescaler -> 2000
 Parameter Settings -> Counter Settings -> Counter Periode -> 99
@@ -200,9 +199,9 @@ Toolchain / IDE -> Makefile
 ```
 
 *(top right)*
-
-`Generate Code`
-
+```
+Generate Code
+```
 
 ##### Toolchain
 
@@ -210,9 +209,9 @@ Toolchain / IDE -> Makefile
 Open Terminal, locate to project location
 
 Launch editor in project root directory
-
-`make`
-
+```
+make
+```
 Should compile just fine
 
 
@@ -222,8 +221,9 @@ Should compile just fine
 Src -> main.c (https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-monochrome/Src/main.c)
 
 add line 40 (/* USER CODE BEGIN PM */): 
-
-`void setPixel(uint8_t x, uint8_t y, uint8_t c);`
+```
+void setPixel(uint8_t x, uint8_t y, uint8_t c);
+```
 
 add line 50 (/* USER CODE BEGIN PV */):
 ```
@@ -243,8 +243,8 @@ add line 109 (/* USER CODE BEGIN 2 */):
 HAL_SPI_Init(&hspi1);
 HAL_SPI_Transmit_DMA(&hspi1,cbuf,5);                                          
 for(uint8_t i = 1; i <= 8; i++){                        
-fbuf[i-1] = (i << 8);                                            
-//fbuf[i-1] = fbuf[i-1] + 0xF5;                      
+  fbuf[i-1] = (i << 8);                                            
+  //fbuf[i-1] = fbuf[i-1] + 0xF5;                      
 }                                          
 HAL_TIM_Base_Start_IT(&htim1);                      
 HAL_TIMEx_PWMN_Start(&htim1,TIM_CHANNEL_1);                    
@@ -273,8 +273,10 @@ void setPixel(uint8_t x, uint8_t y, uint8_t c){
 }
 ```
 
-`make`
-
+In console type
+```
+make
+```
 Should compile just fine
 
 
@@ -292,8 +294,9 @@ plug in the OtterPill while pressing the DFU button
 Bus 001 Device 007: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
 
 flash with dfu-util:
-
-`dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin`
+```
+dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin
+```
 
 -----
 
@@ -305,6 +308,8 @@ flash with dfu-util:
 *(left)*
 ```
 System Core -> SYS -> Debug Serial Wire
+```
+```
 Timers -> TIM1 -> Channel 1: PWM Generation CH1N or PB13 -> TIM1_CH1N
 Parameter Settings -> Counter Settings -> Prescaler -> 2000
 Parameter Settings -> Counter Settings -> Counter Periode -> 99
@@ -340,8 +345,10 @@ Open Terminal, locate to project location
 
 Launch editor in project root directory
 
-`make`
-
+Launch console and type
+```
+make
+```
 Should compile just fine
 
 
@@ -370,9 +377,9 @@ uint32_t tickTime;
 ```
 
 add line 69 (/* USER CODE BEGIN PM */): 
-
-`void setPixel(uint8_t x, uint8_t y, uint8_t c);`
-
+```
+void setPixel(uint8_t x, uint8_t y, uint8_t c);
+```
 
 add line 111 (/* USER CODE BEGIN 2 */):
 ```
@@ -444,8 +451,10 @@ if(__HAL_TIM_GET_FLAG(&htim1,TIM_FLAG_UPDATE) && HAL_DMA_GetState(&hdma_spi1_tx)
 }
 ```
 
-`make`
-
+In console type
+```
+make
+```
 
 Should compile just fine
 
@@ -462,7 +471,7 @@ plug in the OtterPill while pressing the DFU button
 Bus 001 Device 007: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
 
 flash with dfu-util:
-
-`dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin`
-
+```
+dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin
+```
 
