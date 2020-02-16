@@ -2,6 +2,9 @@
 
 ## Files and notes for the "STM32 for Arduino Users" workshop at HackerHotel 2020
 
+-----
+
+
 ### STM32 for Arduino Users
 
 This workshop is intended for people who are annoyed of the chains Arduino and other electronics beginners ecosystems like MicroPhython or low.js has put on them.
@@ -26,17 +29,18 @@ You will receive all hardware required for participating for a cost of 15€. Un
 
 If you would like to join, please prepare the following software on your laptop: 
 
+-----
+
 ### Before the workshop:
 
 #### prerequisites (debian / Ubuntu):
 
-
-`sudo apt-get update`
-
-`sudo apt-get install openocd gcc-arm-none-eabi cmake build-essential libusb-1.0-0-dev openjdk-13-jre dfu-util stlink-tools`
+```
+sudo apt-get update
+sudo apt-get install openocd gcc-arm-none-eabi cmake build-essential libusb-1.0-0-dev openjdk-13-jre dfu-util stlink-tools
+```
 
 (evt. sudo apt install libc6-i386 libnewlib-arm-none-eabi)
-
 
 If you don't have stlink-tools, compile from scratch:
 
@@ -48,18 +52,20 @@ https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-
 
 
 
-##### If you have arm-none-eabi-gcc V6 (check with 'arm-none-eabi-gcc - v'):
-
-`sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa`
-`sudo apt-get update`
-`sudo apt-get install gcc-arm-embedded`
-
+**If you have arm-none-eabi-gcc V6 (check with 'arm-none-eabi-gcc - v'):**
+```
+sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+sudo apt-get update
+sudo apt-get install gcc-arm-embedded
+```
 
 ##### CubeMX:
 
 https://www.st.com/en/development-tools/stm32cubemx.html
 
-extract, launch with `java -jar STM32CubeMX`
+extract, launch with
+
+`java -jar STM32CubeMX`
 
 
 ##### A text editor of your choice:
@@ -76,7 +82,7 @@ https://github.com/Jan--Henrik/hackerhotel-stm-workshop
 
 https://github.com/Jan--Henrik/OtterPill
 
-
+-----
 
 ###  workshop notes tl;dr
 
@@ -85,31 +91,31 @@ CubeMX, file -> New Project
 
 Select STM32F072C8Tx, LQFP48
 
+-----
 
 #### Simple blink:
 
 ##### Settings:
 
-(left)
-
+*(left)*
+```
 System Core -> SYS -> Debug Serial Wire
-
 PB13 -> GPIO Output
-
 PB13 -> right-click -> Enter user label -> "LED"
+```
 
-
-(top)
-
+*(top)*
+```
 Project Manager
-
 select name
-
 select location
-
 Toolchain / IDE -> Makefile
+```
 
-top right: Generate Code
+*(top right)*
+
+`Generate Code`
+
 
 ##### Toolchain
 
@@ -124,7 +130,9 @@ Should compile just fine
 
 ##### Modify project. Start with:
 
-Src -> main.c [](https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/blink/Src/main.c)
+
+Src -> main.c (https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/blink/Src/main.c)
+
 
 add line 100:
 ```
@@ -138,7 +146,9 @@ HAL_Delay(100);
 
 Should compile just fine
 
+
 ##### Flashing
+
 
 plug in the OtterPill while pressing the DFU button
 
@@ -151,55 +161,47 @@ flash with dfu-util:
 `dfu-util -a 0 -s 0x08000000:leave -D build/blink.bin`
 
 
-#### Monochrome matrix test:
+-----
 
+#### Monochrome matrix test:
 
 ##### Settings:
 
 
-(left)
-
+*(left)*
+```
 System Core -> SYS -> Debug Serial Wire
-
 Timers -> TIM1 -> Channel 1: PWM Generation CH1N or PB13 -> TIM1_CH1N
-
 Parameter Settings -> Counter Settings -> Prescaler -> 2000
-
 Parameter Settings -> Counter Settings -> Counter Periode -> 99
-
 Parameter Settings -> PWM Generation Channel 1N -> Pulse -> 50
-
 NVIC Settings -> TIM1 break, update... interrupts -> enable
-
-
-
+```
+```
 Connectivity -> SPI1 -> Mode: Full-Dublex Master
-
 Connectivity -> SPI1 -> : Hardware NSS Signal: Hardware NSS Signal Output
-
 Parameter Settings -> Data Size -> 16
-
 Parameter Settings -> Clock Parameter -> Prescaler -> 8
-
 DMA Settings -> Add -> SPI1_TX 
+```
 
-
-(top)
-
+*(top)*
+```
 Clock Configuration -> System Clock MUX, select HSI48
+```
 
+*(top)*
 
-(top)
-
+```
 Project Manager
-
 select name
-
 select location
-
 Toolchain / IDE -> Makefile
+```
 
-top right: Generate Code
+*(top right)*
+
+`Generate Code`
 
 
 ##### Toolchain
@@ -217,7 +219,7 @@ Should compile just fine
 ##### Modify project. Start with:
 
 
-Src -> main.c [](https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-monochrome/Src/main.c)
+Src -> main.c (https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-monochrome/Src/main.c)
 
 add line 40 (/* USER CODE BEGIN PM */): 
 
@@ -293,57 +295,43 @@ flash with dfu-util:
 
 `dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin`
 
+-----
 
 #### Greyscale matrix test:
 
 ##### Settings:
 
 
-(left)
-
+*(left)*
+```
 System Core -> SYS -> Debug Serial Wire
-
 Timers -> TIM1 -> Channel 1: PWM Generation CH1N or PB13 -> TIM1_CH1N
-
 Parameter Settings -> Counter Settings -> Prescaler -> 2000
-
 Parameter Settings -> Counter Settings -> Counter Periode -> 99
-
 Parameter Settings -> PWM Generation Channel 1N -> Pulse -> 50
-
 NVIC Settings -> TIM1 break, update... interrupts -> enable
-
-
-
+```
+```
 Connectivity -> SPI1 -> Mode: Full-Dublex Master
-
 Connectivity -> SPI1 -> : Hardware NSS Signal: Hardware NSS Signal Output
-
 Parameter Settings -> Data Size -> 16
-
 Parameter Settings -> Clock Parameter -> Prescaler -> 8
-
 DMA Settings -> Add -> SPI1_TX -> 
+```
 
-
-
-(top)
-
+*(top)*
+```
 Clock Configuration -> System Clock MUX, select HSI48
+```
 
-
-(top)
-
+*(top)*
+```
 Project Manager
-
 select name
-
 select location
-
 Toolchain / IDE -> Makefile
-
 top right: Generate Code
-
+```
 
 ##### Toolchain
 
@@ -463,7 +451,9 @@ Should compile just fine
 
 ##### Flashing
 
-wire up your led matrix: https://github.com/Jan--Henrik/hackerhotel-stm-workshop/raw/master/IMG_20200215_121521.jpg
+wire up your led matrix:
+
+![]( https://github.com/Jan--Henrik/hackerhotel-stm-workshop/raw/master/IMG_20200215_121521.jpg)
 
 plug in the OtterPill while pressing the DFU button
 
