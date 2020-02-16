@@ -1,0 +1,3 @@
+blink/build/*
+matrix-test-grayscale/build/*
+matrix-test-monochrome/build/*
