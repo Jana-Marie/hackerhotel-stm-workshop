@@ -24,15 +24,19 @@ Schedule:
 
 You will receive all hardware required for participating for a cost of 15€. Unfortuantly, we can only provide 10 kits consisting of an OtterPill STM32F072 based STM32 devboard, a ST-Link V2 USB debugger and  a MAX7219 LED Matrix. If you did not get a kit, you can also participate as a listener or bring your own related hardware.
 
-### If you would like to join, please prepare the following software on your laptop: 
+If you would like to join, please prepare the following software on your laptop: 
 
-prerequisites (debian / Ubuntu):
+### Before the workshop:
+
+#### prerequisites (debian / Ubuntu):
+
 
 `sudo apt-get update`
 
 `sudo apt-get install openocd gcc-arm-none-eabi cmake build-essential libusb-1.0-0-dev openjdk-13-jre dfu-util stlink-tools`
 
 (evt. sudo apt install libc6-i386 libnewlib-arm-none-eabi)
+
 
 If you don't have stlink-tools, compile from scratch:
 
@@ -42,45 +46,49 @@ https://github.com/texane/stlink/blob/master/doc/compiling.md
 
 https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-monochrome/matrix-test.ioc
 
-If you have arm-none-eabi-gcc V6 (check with 'arm-none-eabi-gcc - v'):
 
-Step1: Inside Ubuntu, open a terminal and input
+
+##### If you have arm-none-eabi-gcc V6 (check with 'arm-none-eabi-gcc - v'):
 
 `sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa`
-
-Step2: Continue to input
-
 `sudo apt-get update`
-
-Step3: Continue to input to install toolchain
-
 `sudo apt-get install gcc-arm-embedded`
 
-CubeMX:
+
+##### CubeMX:
 
 https://www.st.com/en/development-tools/stm32cubemx.html
 
 extract, launch with `java -jar STM32CubeMX`
 
-A text editor of your choice:
+
+##### A text editor of your choice:
+
 e.g. Atom, Sublime, vscode
 
-https://pads.otter.jetzt/p/stm32
 
-workshop files (you don't have to clone the repo for the workshop):
+##### Workshop files:
+
 https://github.com/Jan--Henrik/hackerhotel-stm-workshop
-OtterPill:
+
+
+##### Workshop Hardware:
+
 https://github.com/Jan--Henrik/OtterPill
 
-## workshop notes tl;dr
+
+
+###  workshop notes tl;dr
+
 
 CubeMX, file -> New Project
 
 Select STM32F072C8Tx, LQFP48
 
-### Simple blink:
 
-Settings:
+#### Simple blink:
+
+##### Settings:
 
 (left)
 
@@ -103,6 +111,7 @@ Toolchain / IDE -> Makefile
 
 top right: Generate Code
 
+##### Toolchain
 
 Open Terminal, locate to project location
 
@@ -113,9 +122,9 @@ Launch editor in project root directory
 Should compile just fine
 
 
-Modify project. Start with:
+##### Modify project. Start with:
 
-Src -> main.c (https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/blink/Src/main.c)
+Src -> main.c [](https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/blink/Src/main.c)
 
 add line 100:
 ```
@@ -129,6 +138,8 @@ HAL_Delay(100);
 
 Should compile just fine
 
+##### Flashing
+
 plug in the OtterPill while pressing the DFU button
 
 `lsusb` should show something like:
@@ -140,10 +151,11 @@ flash with dfu-util:
 `dfu-util -a 0 -s 0x08000000:leave -D build/blink.bin`
 
 
-### Monochrome matrix test:
+#### Monochrome matrix test:
 
 
-Settings:
+##### Settings:
+
 
 (left)
 
@@ -190,6 +202,9 @@ Toolchain / IDE -> Makefile
 top right: Generate Code
 
 
+##### Toolchain
+
+
 Open Terminal, locate to project location
 
 Launch editor in project root directory
@@ -199,10 +214,10 @@ Launch editor in project root directory
 Should compile just fine
 
 
+##### Modify project. Start with:
 
-Modify project. Start with:
 
-Src -> main.c ( https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-monochrome/Src/main.c )
+Src -> main.c [](https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-monochrome/Src/main.c)
 
 add line 40 (/* USER CODE BEGIN PM */): 
 
@@ -260,7 +275,13 @@ void setPixel(uint8_t x, uint8_t y, uint8_t c){
 
 Should compile just fine
 
-wire up your led matrix: https://github.com/Jan--Henrik/hackerhotel-stm-workshop/raw/master/IMG_20200215_121521.jpg
+
+##### Flashing
+
+
+Wire up your led matrix: 
+
+![](https://github.com/Jan--Henrik/hackerhotel-stm-workshop/raw/master/IMG_20200215_121521.jpg)
 
 plug in the OtterPill while pressing the DFU button
 
@@ -273,9 +294,10 @@ flash with dfu-util:
 `dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin`
 
 
-### Greyscale matrix test:
+#### Greyscale matrix test:
 
-Settings:
+##### Settings:
+
 
 (left)
 
@@ -323,6 +345,9 @@ Toolchain / IDE -> Makefile
 top right: Generate Code
 
 
+##### Toolchain
+
+
 Open Terminal, locate to project location
 
 Launch editor in project root directory
@@ -332,7 +357,7 @@ Launch editor in project root directory
 Should compile just fine
 
 
-Modify project. Start with:
+##### Modify project. Start with:
 
 Src -> main.c (https://github.com/Jan--Henrik/hackerhotel-stm-workshop/blob/master/matrix-test-grayscale/Src/main.c)
 
@@ -435,6 +460,8 @@ if(__HAL_TIM_GET_FLAG(&htim1,TIM_FLAG_UPDATE) && HAL_DMA_GetState(&hdma_spi1_tx)
 
 
 Should compile just fine
+
+##### Flashing
 
 wire up your led matrix: https://github.com/Jan--Henrik/hackerhotel-stm-workshop/raw/master/IMG_20200215_121521.jpg
 
