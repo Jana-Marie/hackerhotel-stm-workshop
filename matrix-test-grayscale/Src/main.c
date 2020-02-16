@@ -54,7 +54,7 @@ uint16_t cbuf[5]={0x0b07,   //scanLimit no limit
                   0x0900,   //decode mode none
                   0x0c01,   //shutdown off
                   0x0f00,   //display test off
-                  0x0a04};  //intensity max
+                  0x0a0a};  //intensity max
 int16_t color;
 uint64_t lastTick;
 uint32_t tickTime;
@@ -132,7 +132,7 @@ int main(void)
     lastTick = HAL_GetTick();
     for(uint8_t x = 0; x <= 7; x++){
       for(uint8_t y = 0; y <= 7; y++){
-        color = 30.0 + sin((10.0*(((x-4)/8.0)*sin(HAL_GetTick()/500.0)+((y-4)/8.0)*cos(HAL_GetTick()/300.0)))+HAL_GetTick()/10000.0)*32;
+        color = 8.0 + sin((10.0*(((x-4)/8.0)*sin(HAL_GetTick()/500.0)+((y-4)/8.0)*cos(HAL_GetTick()/300.0)))+HAL_GetTick()/10000.0)*8;
         //color = x*64;
         setPixel(x,y,color);
       }
