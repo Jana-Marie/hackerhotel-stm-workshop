@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccRIM2hi.s 			page 1
+ARM GAS  /tmp/cc3M5MBo.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c **** 
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c **** /** @defgroup PWREx PWREx
   33:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****   * @brief    PWREx HAL module driver
-ARM GAS  /tmp/ccRIM2hi.s 			page 2
+ARM GAS  /tmp/cc3M5MBo.s 			page 2
 
 
   34:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
   88:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****           and can generate an interrupt if enabled. This is done through
   89:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****           HAL_PWREx_EnableVddio2Monitor() function.
   90:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****       -@- VDDIO2 is available on STM32F07x/09x/04x
-ARM GAS  /tmp/ccRIM2hi.s 			page 3
+ARM GAS  /tmp/cc3M5MBo.s 			page 3
 
 
   91:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****                     
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
   50              		.loc 1 120 0
   51 001e 9968     		ldr	r1, [r3, #8]
   52 0020 1140     		ands	r1, r2
-ARM GAS  /tmp/ccRIM2hi.s 			page 4
+ARM GAS  /tmp/cc3M5MBo.s 			page 4
 
 
   53 0022 9960     		str	r1, [r3, #8]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
   90 005c 0B43     		orrs	r3, r1
   91 005e 9360     		str	r3, [r2, #8]
   92              	.L4:
-ARM GAS  /tmp/ccRIM2hi.s 			page 5
+ARM GAS  /tmp/cc3M5MBo.s 			page 5
 
 
  138:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****   }
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  134 0002 1368     		ldr	r3, [r2]
  135 0004 1021     		movs	r1, #16
  136 0006 0B43     		orrs	r3, r1
-ARM GAS  /tmp/ccRIM2hi.s 			page 6
+ARM GAS  /tmp/cc3M5MBo.s 			page 6
 
 
  137 0008 1360     		str	r3, [r2]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  184              		.thumb_func
  185              		.fpu softvfp
  187              	HAL_PWR_PVDCallback:
-ARM GAS  /tmp/ccRIM2hi.s 			page 7
+ARM GAS  /tmp/cc3M5MBo.s 			page 7
 
 
  188              	.LFB44:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  214 0000 10B5     		push	{r4, lr}
  215              	.LCFI0:
  216              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccRIM2hi.s 			page 8
+ARM GAS  /tmp/cc3M5MBo.s 			page 8
 
 
  217              		.cfi_offset 4, -8
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  204:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****           NVIS has to be enable by user.
  205:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****   * @retval None
  206:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c ****   */
-ARM GAS  /tmp/ccRIM2hi.s 			page 9
+ARM GAS  /tmp/cc3M5MBo.s 			page 9
 
 
  207:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c **** void HAL_PWREx_EnableVddio2Monitor(void)
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  299 0002 1A68     		ldr	r2, [r3]
  300 0004 5200     		lsls	r2, r2, #1
  301 0006 5208     		lsrs	r2, r2, #1
-ARM GAS  /tmp/ccRIM2hi.s 			page 10
+ARM GAS  /tmp/cc3M5MBo.s 			page 10
 
 
  302 0008 1A60     		str	r2, [r3]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  246:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c **** __weak void HAL_PWREx_Vddio2MonitorCallback(void)
  247:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c **** {
  332              		.loc 1 247 0
-ARM GAS  /tmp/ccRIM2hi.s 			page 11
+ARM GAS  /tmp/cc3M5MBo.s 			page 11
 
 
  333              		.cfi_startproc
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  240:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c **** 
  380              		.loc 1 240 0
  381 0018 F7E7     		b	.L27
-ARM GAS  /tmp/ccRIM2hi.s 			page 12
+ARM GAS  /tmp/cc3M5MBo.s 			page 12
 
 
  382              	.L31:
@@ -676,35 +676,35 @@ ARM GAS  /tmp/ccRIM2hi.s 			page 1
  395              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h"
  396              		.file 7 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h"
  397              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/ccRIM2hi.s 			page 13
+ARM GAS  /tmp/cc3M5MBo.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_hal_pwr_ex.c
-     /tmp/ccRIM2hi.s:16     .text.HAL_PWR_ConfigPVD:0000000000000000 $t
-     /tmp/ccRIM2hi.s:23     .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
-     /tmp/ccRIM2hi.s:111    .text.HAL_PWR_ConfigPVD:0000000000000074 $d
-     /tmp/ccRIM2hi.s:118    .text.HAL_PWR_EnablePVD:0000000000000000 $t
-     /tmp/ccRIM2hi.s:125    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
-     /tmp/ccRIM2hi.s:144    .text.HAL_PWR_EnablePVD:000000000000000c $d
-     /tmp/ccRIM2hi.s:149    .text.HAL_PWR_DisablePVD:0000000000000000 $t
-     /tmp/ccRIM2hi.s:156    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
-     /tmp/ccRIM2hi.s:175    .text.HAL_PWR_DisablePVD:000000000000000c $d
-     /tmp/ccRIM2hi.s:180    .text.HAL_PWR_PVDCallback:0000000000000000 $t
-     /tmp/ccRIM2hi.s:187    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
-     /tmp/ccRIM2hi.s:201    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
-     /tmp/ccRIM2hi.s:208    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
-     /tmp/ccRIM2hi.s:242    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
-     /tmp/ccRIM2hi.s:247    .text.HAL_PWREx_EnableVddio2Monitor:0000000000000000 $t
-     /tmp/ccRIM2hi.s:254    .text.HAL_PWREx_EnableVddio2Monitor:0000000000000000 HAL_PWREx_EnableVddio2Monitor
-     /tmp/ccRIM2hi.s:278    .text.HAL_PWREx_EnableVddio2Monitor:0000000000000014 $d
-     /tmp/ccRIM2hi.s:283    .text.HAL_PWREx_DisableVddio2Monitor:0000000000000000 $t
-     /tmp/ccRIM2hi.s:290    .text.HAL_PWREx_DisableVddio2Monitor:0000000000000000 HAL_PWREx_DisableVddio2Monitor
-     /tmp/ccRIM2hi.s:318    .text.HAL_PWREx_DisableVddio2Monitor:000000000000001c $d
-     /tmp/ccRIM2hi.s:323    .text.HAL_PWREx_Vddio2MonitorCallback:0000000000000000 $t
-     /tmp/ccRIM2hi.s:330    .text.HAL_PWREx_Vddio2MonitorCallback:0000000000000000 HAL_PWREx_Vddio2MonitorCallback
-     /tmp/ccRIM2hi.s:344    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:0000000000000000 $t
-     /tmp/ccRIM2hi.s:351    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:0000000000000000 HAL_PWREx_Vddio2Monitor_IRQHandler
-     /tmp/ccRIM2hi.s:385    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:000000000000001c $d
+     /tmp/cc3M5MBo.s:16     .text.HAL_PWR_ConfigPVD:0000000000000000 $t
+     /tmp/cc3M5MBo.s:23     .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
+     /tmp/cc3M5MBo.s:111    .text.HAL_PWR_ConfigPVD:0000000000000074 $d
+     /tmp/cc3M5MBo.s:118    .text.HAL_PWR_EnablePVD:0000000000000000 $t
+     /tmp/cc3M5MBo.s:125    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
+     /tmp/cc3M5MBo.s:144    .text.HAL_PWR_EnablePVD:000000000000000c $d
+     /tmp/cc3M5MBo.s:149    .text.HAL_PWR_DisablePVD:0000000000000000 $t
+     /tmp/cc3M5MBo.s:156    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
+     /tmp/cc3M5MBo.s:175    .text.HAL_PWR_DisablePVD:000000000000000c $d
+     /tmp/cc3M5MBo.s:180    .text.HAL_PWR_PVDCallback:0000000000000000 $t
+     /tmp/cc3M5MBo.s:187    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
+     /tmp/cc3M5MBo.s:201    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 $t
+     /tmp/cc3M5MBo.s:208    .text.HAL_PWR_PVD_IRQHandler:0000000000000000 HAL_PWR_PVD_IRQHandler
+     /tmp/cc3M5MBo.s:242    .text.HAL_PWR_PVD_IRQHandler:000000000000001c $d
+     /tmp/cc3M5MBo.s:247    .text.HAL_PWREx_EnableVddio2Monitor:0000000000000000 $t
+     /tmp/cc3M5MBo.s:254    .text.HAL_PWREx_EnableVddio2Monitor:0000000000000000 HAL_PWREx_EnableVddio2Monitor
+     /tmp/cc3M5MBo.s:278    .text.HAL_PWREx_EnableVddio2Monitor:0000000000000014 $d
+     /tmp/cc3M5MBo.s:283    .text.HAL_PWREx_DisableVddio2Monitor:0000000000000000 $t
+     /tmp/cc3M5MBo.s:290    .text.HAL_PWREx_DisableVddio2Monitor:0000000000000000 HAL_PWREx_DisableVddio2Monitor
+     /tmp/cc3M5MBo.s:318    .text.HAL_PWREx_DisableVddio2Monitor:000000000000001c $d
+     /tmp/cc3M5MBo.s:323    .text.HAL_PWREx_Vddio2MonitorCallback:0000000000000000 $t
+     /tmp/cc3M5MBo.s:330    .text.HAL_PWREx_Vddio2MonitorCallback:0000000000000000 HAL_PWREx_Vddio2MonitorCallback
+     /tmp/cc3M5MBo.s:344    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:0000000000000000 $t
+     /tmp/cc3M5MBo.s:351    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:0000000000000000 HAL_PWREx_Vddio2Monitor_IRQHandler
+     /tmp/cc3M5MBo.s:385    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:000000000000001c $d
 
 NO UNDEFINED SYMBOLS

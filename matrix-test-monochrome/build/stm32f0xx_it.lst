@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccI6FgGK.s 			page 1
+ARM GAS  /tmp/ccHa21OU.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccI6FgGK.s 			page 1
   31:Src/stm32f0xx_it.c **** /* USER CODE END TD */
   32:Src/stm32f0xx_it.c **** 
   33:Src/stm32f0xx_it.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  /tmp/ccI6FgGK.s 			page 2
+ARM GAS  /tmp/ccHa21OU.s 			page 2
 
 
   34:Src/stm32f0xx_it.c **** /* USER CODE BEGIN PD */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccI6FgGK.s 			page 1
   32              		@ sp needed
   33 0000 7047     		bx	lr
   34              		.cfi_endproc
-ARM GAS  /tmp/ccI6FgGK.s 			page 3
+ARM GAS  /tmp/ccHa21OU.s 			page 3
 
 
   35              	.LFE40:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccI6FgGK.s 			page 1
   72              		@ link register save eliminated.
  103:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN SVC_IRQn 0 */
  104:Src/stm32f0xx_it.c **** 
-ARM GAS  /tmp/ccI6FgGK.s 			page 4
+ARM GAS  /tmp/ccHa21OU.s 			page 4
 
 
  105:Src/stm32f0xx_it.c ****   /* USER CODE END SVC_IRQn 0 */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccI6FgGK.s 			page 1
  126:Src/stm32f0xx_it.c ****   */
  127:Src/stm32f0xx_it.c **** void SysTick_Handler(void)
  128:Src/stm32f0xx_it.c **** {
-ARM GAS  /tmp/ccI6FgGK.s 			page 5
+ARM GAS  /tmp/ccHa21OU.s 			page 5
 
 
  110              		.loc 1 128 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccI6FgGK.s 			page 1
  145              		.cfi_offset 4, -8
  146              		.cfi_offset 14, -4
  150:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN DMA1_Channel2_3_IRQn 0 */
-ARM GAS  /tmp/ccI6FgGK.s 			page 6
+ARM GAS  /tmp/ccHa21OU.s 			page 6
 
 
  151:Src/stm32f0xx_it.c **** 
@@ -346,97 +346,65 @@ ARM GAS  /tmp/ccI6FgGK.s 			page 1
  178              		.cfi_offset 4, -8
  179              		.cfi_offset 14, -4
  164:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN TIM1_BRK_UP_TRG_COM_IRQn 0 */
- 165:Src/stm32f0xx_it.c ****   if(__HAL_TIM_GET_FLAG(&htim1,TIM_FLAG_UPDATE) && HAL_DMA_GetState(&hdma_spi1_tx) == HAL_DMA_STATE
- 180              		.loc 1 165 0
- 181 0002 0A4B     		ldr	r3, .L13
- 182 0004 1B68     		ldr	r3, [r3]
- 183 0006 1B69     		ldr	r3, [r3, #16]
- 184 0008 DB07     		lsls	r3, r3, #31
- 185 000a 03D4     		bmi	.L12
- 186              	.L11:
- 166:Src/stm32f0xx_it.c ****     HAL_SPI_Transmit_DMA(&hspi1,fbuf,8);
- 167:Src/stm32f0xx_it.c ****   }
- 168:Src/stm32f0xx_it.c ****   /* USER CODE END TIM1_BRK_UP_TRG_COM_IRQn 0 */
- 169:Src/stm32f0xx_it.c ****   HAL_TIM_IRQHandler(&htim1);
-ARM GAS  /tmp/ccI6FgGK.s 			page 7
+ 165:Src/stm32f0xx_it.c **** 
+ 166:Src/stm32f0xx_it.c ****   /* USER CODE END TIM1_BRK_UP_TRG_COM_IRQn 0 */
+ 167:Src/stm32f0xx_it.c ****   HAL_TIM_IRQHandler(&htim1);
+ 180              		.loc 1 167 0
+ 181 0002 0248     		ldr	r0, .L11
+ 182 0004 FFF7FEFF 		bl	HAL_TIM_IRQHandler
+ 183              	.LVL2:
+ 168:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN TIM1_BRK_UP_TRG_COM_IRQn 1 */
+ 169:Src/stm32f0xx_it.c **** 
+ 170:Src/stm32f0xx_it.c ****   /* USER CODE END TIM1_BRK_UP_TRG_COM_IRQn 1 */
+ 171:Src/stm32f0xx_it.c **** }
+ 184              		.loc 1 171 0
+ARM GAS  /tmp/ccHa21OU.s 			page 7
 
 
- 187              		.loc 1 169 0
- 188 000c 0748     		ldr	r0, .L13
- 189 000e FFF7FEFF 		bl	HAL_TIM_IRQHandler
- 190              	.LVL2:
- 170:Src/stm32f0xx_it.c ****   /* USER CODE BEGIN TIM1_BRK_UP_TRG_COM_IRQn 1 */
- 171:Src/stm32f0xx_it.c **** 
- 172:Src/stm32f0xx_it.c ****   /* USER CODE END TIM1_BRK_UP_TRG_COM_IRQn 1 */
- 173:Src/stm32f0xx_it.c **** }
- 191              		.loc 1 173 0
- 192              		@ sp needed
- 193 0012 10BD     		pop	{r4, pc}
- 194              	.L12:
- 165:Src/stm32f0xx_it.c ****     HAL_SPI_Transmit_DMA(&hspi1,fbuf,8);
- 195              		.loc 1 165 0 discriminator 1
- 196 0014 0648     		ldr	r0, .L13+4
- 197 0016 FFF7FEFF 		bl	HAL_DMA_GetState
- 198              	.LVL3:
- 199 001a 0128     		cmp	r0, #1
- 200 001c F6D1     		bne	.L11
- 166:Src/stm32f0xx_it.c ****     HAL_SPI_Transmit_DMA(&hspi1,fbuf,8);
- 201              		.loc 1 166 0
- 202 001e 0822     		movs	r2, #8
- 203 0020 0449     		ldr	r1, .L13+8
- 204 0022 0548     		ldr	r0, .L13+12
- 205 0024 FFF7FEFF 		bl	HAL_SPI_Transmit_DMA
- 206              	.LVL4:
- 207 0028 F0E7     		b	.L11
- 208              	.L14:
- 209 002a C046     		.align	2
- 210              	.L13:
- 211 002c 00000000 		.word	htim1
- 212 0030 00000000 		.word	hdma_spi1_tx
- 213 0034 00000000 		.word	fbuf
- 214 0038 00000000 		.word	hspi1
- 215              		.cfi_endproc
- 216              	.LFE46:
- 218              		.text
- 219              	.Letext0:
- 220              		.file 2 "/home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/include/machin
- 221              		.file 3 "/home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/include/sys/_s
- 222              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
- 223              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
- 224              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
- 225              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
- 226              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h"
- 227              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h"
- 228              		.file 10 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  /tmp/ccI6FgGK.s 			page 8
+ 185              		@ sp needed
+ 186 0008 10BD     		pop	{r4, pc}
+ 187              	.L12:
+ 188 000a C046     		.align	2
+ 189              	.L11:
+ 190 000c 00000000 		.word	htim1
+ 191              		.cfi_endproc
+ 192              	.LFE46:
+ 194              		.text
+ 195              	.Letext0:
+ 196              		.file 2 "/home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/include/machin
+ 197              		.file 3 "/home/janhenrik/programme/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/include/sys/_s
+ 198              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
+ 199              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h"
+ 200              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
+ 201              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
+ 202              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h"
+ 203              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h"
+ 204              		.file 10 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+ARM GAS  /tmp/ccHa21OU.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f0xx_it.c
-     /tmp/ccI6FgGK.s:16     .text.NMI_Handler:0000000000000000 $t
-     /tmp/ccI6FgGK.s:23     .text.NMI_Handler:0000000000000000 NMI_Handler
-     /tmp/ccI6FgGK.s:38     .text.HardFault_Handler:0000000000000000 $t
-     /tmp/ccI6FgGK.s:45     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-     /tmp/ccI6FgGK.s:59     .text.SVC_Handler:0000000000000000 $t
-     /tmp/ccI6FgGK.s:66     .text.SVC_Handler:0000000000000000 SVC_Handler
-     /tmp/ccI6FgGK.s:80     .text.PendSV_Handler:0000000000000000 $t
-     /tmp/ccI6FgGK.s:87     .text.PendSV_Handler:0000000000000000 PendSV_Handler
-     /tmp/ccI6FgGK.s:101    .text.SysTick_Handler:0000000000000000 $t
-     /tmp/ccI6FgGK.s:108    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-     /tmp/ccI6FgGK.s:129    .text.DMA1_Channel2_3_IRQHandler:0000000000000000 $t
-     /tmp/ccI6FgGK.s:136    .text.DMA1_Channel2_3_IRQHandler:0000000000000000 DMA1_Channel2_3_IRQHandler
-     /tmp/ccI6FgGK.s:157    .text.DMA1_Channel2_3_IRQHandler:000000000000000c $d
-     /tmp/ccI6FgGK.s:162    .text.TIM1_BRK_UP_TRG_COM_IRQHandler:0000000000000000 $t
-     /tmp/ccI6FgGK.s:169    .text.TIM1_BRK_UP_TRG_COM_IRQHandler:0000000000000000 TIM1_BRK_UP_TRG_COM_IRQHandler
-     /tmp/ccI6FgGK.s:211    .text.TIM1_BRK_UP_TRG_COM_IRQHandler:000000000000002c $d
+     /tmp/ccHa21OU.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/ccHa21OU.s:23     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/ccHa21OU.s:38     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/ccHa21OU.s:45     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/ccHa21OU.s:59     .text.SVC_Handler:0000000000000000 $t
+     /tmp/ccHa21OU.s:66     .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/ccHa21OU.s:80     .text.PendSV_Handler:0000000000000000 $t
+     /tmp/ccHa21OU.s:87     .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/ccHa21OU.s:101    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/ccHa21OU.s:108    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+     /tmp/ccHa21OU.s:129    .text.DMA1_Channel2_3_IRQHandler:0000000000000000 $t
+     /tmp/ccHa21OU.s:136    .text.DMA1_Channel2_3_IRQHandler:0000000000000000 DMA1_Channel2_3_IRQHandler
+     /tmp/ccHa21OU.s:157    .text.DMA1_Channel2_3_IRQHandler:000000000000000c $d
+     /tmp/ccHa21OU.s:162    .text.TIM1_BRK_UP_TRG_COM_IRQHandler:0000000000000000 $t
+     /tmp/ccHa21OU.s:169    .text.TIM1_BRK_UP_TRG_COM_IRQHandler:0000000000000000 TIM1_BRK_UP_TRG_COM_IRQHandler
+     /tmp/ccHa21OU.s:190    .text.TIM1_BRK_UP_TRG_COM_IRQHandler:000000000000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
 HAL_DMA_IRQHandler
 hdma_spi1_tx
 HAL_TIM_IRQHandler
-HAL_DMA_GetState
-HAL_SPI_Transmit_DMA
 htim1
-fbuf
-hspi1
