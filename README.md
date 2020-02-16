@@ -527,14 +527,14 @@ Print variable
 p $var
 ```
 
-Set breakpoint at line 132 (in main.c) and print variable p everytime the breakpoint is reached
+Set breakpoint at line 132 (in main.c) and print variable everytime the breakpoint is reached
 ```
 break 132
 commands
 ```
 ```
 silent
-p color
+p $var
 cont
 end
 ```
