@@ -481,6 +481,46 @@ flash with dfu-util:
 dfu-util -a 0 -s 0x08000000:leave -D build/matrix-test-monochrome.bin
 ```
 
-#### Expected output:
+##### Expected output:
 
 ![](grayscale_c.gif)
+
+
+
+### Additional notes
+
+##### Flash FW via st-util:
+```
+st-flash write build/workshop-debug-test.bin 0x8000000
+```
+
+##### Run GDB Server:
+```
+st-utils
+```
+    
+##### GDB Client:
+```
+arm-none-eabi-gdb build/matrix-test-monochrome.elf --tui
+```
+```
+> target extended-remote :4242
+> continue
+```
+```
+> b main   //breakpoint at main
+```
+```
+> load build/workshop-debug-test.elf     //reload and flash bin
+```
+```
+>p $var     //print variable
+```
+```
+>break 132      //set breakpoint at line 132 (in main.c) and print variable p everytime the breakpoint is reached
+>commands
+>>silent
+>>p color
+>>cont
+>>end
+```
