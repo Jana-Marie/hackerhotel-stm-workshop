@@ -508,31 +508,33 @@ arm-none-eabi-gdb build/matrix-test-monochrome.elf --tui
 
 Connect to target and run code
 ```
-> target extended-remote :4242
-> continue
+target extended-remote :4242
+continue
 ```
 
 Set breakpoint at main
 ```
-> b main
+b main
 ```
 
 Reload and flash bin
 ```
-> load build/workshop-debug-test.elf
+load build/workshop-debug-test.elf
 ```
 
 Print variable
 ```
->p $var
+p $var
 ```
 
 Set breakpoint at line 132 (in main.c) and print variable p everytime the breakpoint is reached
 ```
->break 132
->commands
->>silent
->>p color
->>cont
->>end
+break 132
+commands
+```
+```
+silent
+p color
+cont
+end
 ```
