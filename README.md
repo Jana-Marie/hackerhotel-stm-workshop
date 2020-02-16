@@ -1,6 +1,6 @@
 # hackerhotel-stm-workshop
 
-## Files and notes for the "STM32 for Arduino Users" workshop at HackerHotel 2020
+## Files and notes for the ["STM32 for Arduino Users"](https://hackerhotel.nl/index.php/timetable/event/stm32-for-arduino-users/) workshop at [HackerHotel 2020](https://hackerhotel.nl/)
 
 -----
 
